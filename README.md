@@ -1,81 +1,48 @@
-# Next.js Portfolio
+<h1 align="center">Hi, I'm Chang Chen</h1>
+<h3 align="center">Full Stack Developer</h3>
 
-Welcome to my personal portfolio! This project showcases my skills, work, and projects in web development. Built with Next.js, it demonstrates my ability to create smooth, scalable, and high-performance web applications.
+<p align="center">
+  <a href="https://github.com/ChangDreamDev">
+    <img src="https://img.shields.io/badge/GitHub-ChangDreamDev-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
+  </a>
+  <a href="mailto:changdreamdev@gmail.com">
+    <img src="https://img.shields.io/badge/Email-changdreamdev@gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
+  </a>
+</p>
 
-## Features
+<p align="center">
+  <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React" />
+  <img src="https://img.shields.io/badge/Next.js-black?style=flat-square&logo=next.js" alt="Next.js" />
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=node.js&logoColor=white" alt="Node.js" />
+  <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
+  <img src="https://img.shields.io/badge/AI-FF6F00?style=flat-square&logo=google&logoColor=white" alt="AI" />
+</p>
 
-- Responsive design optimized for mobile and desktop devices
-- About me section showcasing skills and experience
-- Project showcase with live demo links
-- Contact form for easy communication
+---
 
-## Tech Stack
+I'm a full stack developer who enjoys building modern web applications end to end — from UI and UX to APIs, databases, and deployment.
 
-- **Frontend**: Next.js, React, Tailwind CSS, TypeScript
-- **Deployment**: Vercel (for fast, reliable hosting)
+I care about **clean code**, **performance**, and **reliable products** that feel good to use. I'm comfortable working across the stack: React and Next.js on the frontend, Node and Python on the backend, and integrating AI tools where they add real value.
 
-## Installation
+### What I work with
 
-To get started with this project locally, follow these steps:
+- **Frontend:** React, Next.js, TypeScript, Tailwind CSS, Vue, Angular
+- **Backend:** Node.js, Express, Python, Django, Laravel, REST APIs
+- **Data:** PostgreSQL, MongoDB, MySQL, Supabase
+- **AI & automation:** LLMs, LangChain, RAG, OpenAI integrations
+- **Other:** Webpack, Vite, CI/CD, Figma, agile workflows
 
-1. Clone the repository:
+### What I do
 
-   ```bash
-   git clone https://github.com/ChangDreamDev/My-portfolio.git
-   ```
+- Design and build responsive, interactive user interfaces
+- Develop secure APIs and full stack features
+- Integrate third-party services and AI capabilities
+- Focus on scalability, testing, and maintainable architecture
 
-2. Navigate to the project directory:
+### Let's connect
 
-   ```bash
-   cd My-portfolio
-   ```
+- **GitHub:** [@ChangDreamDev](https://github.com/ChangDreamDev)
+- **Email:** [changdreamdev@gmail.com](mailto:changdreamdev@gmail.com)
 
-3. Install dependencies:
-
-   ```bash
-   npm install
-   ```
-
-4. Run the development server:
-
-   ```bash
-   npm run dev
-   ```
-
-5. Open your browser and visit `http://localhost:3000`.
-
-## Project Structure
-
-```
-/pages            - Next.js pages (routes)
-/public           - Static files (images, icons)
-/components       - Reusable components
-/styles           - Tailwind CSS configuration
-/utils            - Utility functions
-```
-
-## Deployment
-
-This project is deployed on Vercel for fast and scalable hosting.
-
-### To deploy on Vercel:
-
-1. Push your code to a Git repository (GitHub, GitLab, etc.)
-2. Connect your repository to [Vercel](https://vercel.com)
-3. Vercel will automatically deploy your project!
-
-## Contributing
-
-If you'd like to contribute, feel free to fork this project, make changes, and create a pull request. Your contributions are always welcome!
-
-## License
-
-This project is open-source and available under the [MIT License](LICENSE).
-
-
-### Adjustments to make:
-1. Replace `your-username/your-portfolio` with your actual GitHub username and repository name.
-2. If you use a backend or other services, mention them in the Tech Stack and adjust the Project Structure section accordingly.
-3. If you need any extra sections, like a "Contact" or "Experience" section, feel free to add them. 
-
-This should give you a solid foundation for your Next.js portfolio project README.
+Thanks for stopping by.
