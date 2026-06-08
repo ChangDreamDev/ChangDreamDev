@@ -403,7 +403,7 @@ export const SOCIALS = [
   {
     name: "CV",
     icon: FaFilePdf,
-    link: "",
+    link: "https://drive.google.com/file/d/1DEJGy-lLrWixKxIBQM6q-EROaSIFQrv_/view?usp=sharing",
   },
   // {
   //   name: "Telegram",
