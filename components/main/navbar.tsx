@@ -17,6 +17,7 @@ export const Navbar = () => {
               alt="Logo"
               width={56}
               height={56}
+              priority
               draggable={false}
               className="cursor-pointer hover:animate-slowspin md:w-[70px] md:h-[70px]"
             />

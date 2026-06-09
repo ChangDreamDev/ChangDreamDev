@@ -14,8 +14,8 @@ export const ProjectBulletList = ({
 }: ProjectBulletListProps) => {
   return (
     <ul className={`mt-2 space-y-2 text-sm text-gray-300 ${className}`}>
-      {items.map((item) => (
-        <li key={item.label} className="flex items-start gap-2.5">
+      {items.map((item, index) => (
+        <li key={`${item.label}-${index}`} className="flex items-start gap-2.5">
           <span
             aria-hidden
             className="mt-[0.45rem] h-1.5 w-1.5 shrink-0 rounded-full bg-purple-400"
