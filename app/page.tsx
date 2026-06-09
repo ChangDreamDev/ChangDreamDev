@@ -11,36 +11,24 @@ import React, { useEffect, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
-const DEBOUNCE_TIME = 100;
+const DESKTOP_MEDIA_QUERY = "(hover: hover) and (pointer: fine)";
 
 export default function Home() {
-  gsap.registerPlugin(ScrollTrigger);
-  gsap.config({ nullTargetWarn: false });
-
-  const [isDesktop, setisDesktop] = useState(true);
-
-  let timer: NodeJS.Timeout | null = null;
-
-  const debouncedDimensionCalculator = () => {
-    if (timer) clearTimeout(timer);
-    timer = setTimeout(() => {
-      const isDesktopResult =
-        typeof window.screen.orientation === "undefined" &&
-        navigator.userAgent.indexOf("IEMobile") === -1;
-
-      window.history.scrollRestoration = "manual";
-
-      setisDesktop(isDesktopResult);
-    }, DEBOUNCE_TIME);
-  };
+  const [isDesktop, setIsDesktop] = useState(false);
 
   useEffect(() => {
-    debouncedDimensionCalculator();
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.config({ nullTargetWarn: false });
+    window.history.scrollRestoration = "manual";
 
-    window.addEventListener("resize", debouncedDimensionCalculator);
-    return () =>
-      window.removeEventListener("resize", debouncedDimensionCalculator);
-  }, [timer]);
+    const mediaQuery = window.matchMedia(DESKTOP_MEDIA_QUERY);
+    const updateDesktop = () => setIsDesktop(mediaQuery.matches);
+
+    updateDesktop();
+    mediaQuery.addEventListener("change", updateDesktop);
+
+    return () => mediaQuery.removeEventListener("change", updateDesktop);
+  }, []);
 
   return (
     <main className="h-full w-full">

@@ -24,7 +24,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
       <body
         suppressHydrationWarning
         className={cn(
-          "bg-[#030014] overflow-y-scroll overflow-x-hidden cursor-none",
+          "bg-[#030014] overflow-y-scroll overflow-x-hidden",
           inter.className
         )}
       >

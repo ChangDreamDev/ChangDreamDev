@@ -63,7 +63,7 @@ export const ProjectCard = ({
   return (
     <div className="group perspective">
       <div
-        className="relative cursor-none rounded-lg shadow-lg border border-[#2A0E61] transform transition-transform duration-500 group-hover:rotate-x-6 group-hover:rotate-y-6 group-hover:scale-105"
+        className="relative cursor-pointer rounded-lg shadow-lg border border-[#2A0E61] transform transition-transform duration-500 group-hover:rotate-x-6 group-hover:rotate-y-6 group-hover:scale-105"
         role={hasGallery ? "button" : undefined}
         tabIndex={hasGallery ? 0 : undefined}
         onClick={hasGallery ? openGallery : undefined}
@@ -135,7 +135,7 @@ export const ProjectCard = ({
 
       {isGalleryOpen && hasGallery && activeImage && (
         <div
-          className="fixed inset-0 z-50 flex cursor-none items-center justify-center bg-black/80 p-4"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4"
           role="dialog"
           aria-modal="true"
           aria-label={`${title} images`}

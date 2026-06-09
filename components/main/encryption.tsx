@@ -61,9 +61,10 @@ export const Encryption = () => {
           muted
           autoPlay
           playsInline
-          preload="false"
+          preload="none"
           className="w-full h-auto"
         >
+          <source src="/videos/encryption-bg.mp4" type="video/mp4" />
           <source src="/videos/encryption-bg.webm" type="video/webm" />
         </video>
       </div>

@@ -72,10 +72,22 @@ const Cursor = ({ isDesktop }: IDesktop) => {
   };
 
   useEffect(() => {
-    if (isDesktop) {
-      initCursorAnimation();
-    }
-  }, [cursor, follower, isDesktop]);
+    if (!isDesktop) return;
+
+    initCursorAnimation();
+
+    return () => {
+      document.removeEventListener("mousemove", moveCircle);
+      document.querySelectorAll(".link").forEach((el) => {
+        el.removeEventListener("mouseenter", onHover);
+        el.removeEventListener("mouseleave", onUnhover);
+      });
+      cursor.current?.classList.add("hidden");
+      follower.current?.classList.add("hidden");
+    };
+  }, [isDesktop]);
+
+  if (!isDesktop) return null;
 
   return (
     <>
