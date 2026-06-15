@@ -31,7 +31,6 @@ function isWebGLAvailable() {
 const STAR_COUNT_DESKTOP = 5000;
 const STAR_COUNT_MOBILE = 2500;
 const ROTATION_Z = Math.PI / 4;
-const BACKGROUND = "#030014";
 
 function getStarCount() {
   if (typeof window === "undefined") return STAR_COUNT_DESKTOP;
@@ -120,8 +119,7 @@ const StarsFallback = () => {
       rotationX -= delta / 10;
       rotationY -= delta / 15;
 
-      ctx.fillStyle = BACKGROUND;
-      ctx.fillRect(0, 0, width, height);
+      ctx.clearRect(0, 0, width, height);
       ctx.fillStyle = "#ffffff";
 
       const centerX = width / 2;
