@@ -33,6 +33,18 @@ const MUSHGPT_TECH_STACK = [
     value: "MongoDB, Express.js, Tailwind CSS,React.js, React Native, Node.js, FastAPI, Django, AWS, OpenAI, Pinecone",
   },
 ] as const;
+
+const ShipmentSystemPoc = [
+  {
+    label: "",
+    value: "Built a full-stack app where LangChain extracts equipment, weight limits, pay requirements, and home base from a messy transcript, then filters and ranks loads using haversine distance across all three legs: deadhead to pickup, loaded miles, and deadhead home. Includes an interactive React + Google Maps UI to set truck location, visualize routes, and re-rank in real time.",
+  },
+  {
+    label: "Tech Stack:",
+    value: "Python, FastAPI, MongoDB, LangChain, React, Google Maps API",
+  },
+] as const;
+
 export const FRONTEND_SKILL = [
   {
     skill_name: "JavaScript",
@@ -320,10 +332,36 @@ export const PROJECTS: Project[] = [
     videoLink: "https://www.youtube.com/watch?v=HrHI3yyaIJg&t=1s",
     galleryImages: [
       {
+        src: "/projects/mushgpt_1.jpg",
+        alt: "web App",
+        description: "web App",
+      },
+      {
         src: "/projects/mushgpt_2.jpg",
         alt: "Mobile App",
         description: "Mobile App",
       },
+    ],
+  },
+  {
+    title: "Shipment System POC",
+    description: (
+      <div>
+        <p className="mt-2 text-gray-300">
+          Shipment System POC is an AI dispatch assistant that turns a driver phone call into a structured profile and ranks the best loads by true effective pay per mile.
+        </p>
+        <ProjectBulletList items={[...ShipmentSystemPoc]} />
+      </div>
+    ),
+    image: "/projects/Cinesis/Screenshot_1.jpg",
+    fields: ["AI", "Full-stack"],
+    onlineLink: "https://cinesis-good-fit.vercel.app/",
+    sourceCodeLink: "https://github.com/ChangDreamDev/Shipment-System-POC",
+    galleryImages: [
+      { src: "/projects/Cinesis/Screenshot_1.jpg", alt: "Shipment System POC" },
+      { src: "/projects/Cinesis/Screenshot_2.jpg", alt: "Shipment System POC" },
+      { src: "/projects/Cinesis/Screenshot_3.jpg", alt: "Shipment System POC" },
+      { src: "/projects/Cinesis/Screenshot_4.jpg", alt: "Shipment System POC" },
     ],
   },
   {
