@@ -62,28 +62,33 @@ export const ProjectCard = ({
 
   return (
     <div className="group perspective">
-      <div
-        className="relative cursor-pointer rounded-lg shadow-lg border border-[#2A0E61] transform transition-transform duration-500 group-hover:rotate-x-6 group-hover:rotate-y-6 group-hover:scale-105"
-        role={hasGallery ? "button" : undefined}
-        tabIndex={hasGallery ? 0 : undefined}
-        onClick={hasGallery ? openGallery : undefined}
-        onKeyDown={
-          hasGallery
-            ? (e) => {
-                if (e.key === "Enter" || e.key === " ") openGallery();
-              }
-            : undefined
-        }
-      >
-        <div className="overflow-hidden">
-          <Image
-            src={src}
-            alt={title}
-            width={1000}
-            height={1000}
-            className="w-full object-contain"
-          />
-        </div>
+      <div className="relative rounded-lg border border-[#2A0E61] shadow-lg transform transition-transform duration-500 group-hover:rotate-x-6 group-hover:rotate-y-6 group-hover:scale-105">
+        {hasGallery ? (
+          <button
+            type="button"
+            className="block w-full overflow-hidden rounded-t-lg text-left"
+            onClick={openGallery}
+            aria-label={`Open ${title} gallery`}
+          >
+            <Image
+              src={src}
+              alt={title}
+              width={1000}
+              height={1000}
+              className="w-full object-contain cursor-pointer"
+            />
+          </button>
+        ) : (
+          <div className="overflow-hidden rounded-t-lg">
+            <Image
+              src={src}
+              alt={title}
+              width={1000}
+              height={1000}
+              className="w-full object-contain"
+            />
+          </div>
+        )}
 
         <div className="relative p-4">
           <h1 className="text-2xl font-semibold text-white">{title}</h1>

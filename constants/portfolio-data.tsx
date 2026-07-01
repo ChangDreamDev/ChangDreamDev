@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import type { IconType } from "react-icons";
 import { ProjectBulletList } from "@/components/sub/project-bullet-list";
 import { FaTelegram, FaFilePdf } from "react-icons/fa";
 import { RxGithubLogo } from "react-icons/rx";
@@ -42,6 +43,52 @@ const ShipmentSystemPoc = [
   {
     label: "Tech Stack:",
     value: "Python, FastAPI, MongoDB, LangChain, React, Google Maps API",
+  },
+] as const;
+
+const MapImageGenerator = [
+  {
+    label: "Core Features:",
+    value:
+      "Search for a location, recenter the map, style it, adjust crop area, place custom markers, preview scale, and export high-resolution PNG images.",
+  },
+  {
+    label: "Export Options:",
+    value:
+      "Supports paper presets from A1 through A5, full/square/rectangle/circle crop modes, adjustable export width and height, label toggling, and scale preview before export.",
+  },
+  {
+    label: "Desktop Workflow:",
+    value:
+      "Runs inside Electron to provide a desktop-style map composition experience with a polished React UI.",
+  },
+  {
+    label: "Tech Stack:",
+    value:
+      "React 18, Electron, Google Maps JavaScript API, html2canvas, React Bootstrap",
+  },
+] as const;
+
+const BIYAAB_TECH_STACK = [
+  {
+    label: "Platforms:",
+    value:
+      "Built web, mobile (Expo / React Native), and browser extension versions sharing the same search and comparison workflow.",
+  },
+  {
+    label: "Core Features:",
+    value:
+      "Multi-location search across cities and countries, text search via Google Shopping, image search via Google Lens (upload, crop, or paste URL), live currency conversion to USD, interactive Google Maps location picker, and sort/paginate results by price, rating, reviews, or source.",
+  },
+  {
+    label: "Architecture:",
+    value:
+      "React CRA frontend with an Express API proxying SerpAPI and Open Exchange Rates; deployable on Vercel (serverless) or VPS/Railway/Render with local disk or Vercel Blob image storage.",
+  },
+  {
+    label: "Tech Stack:",
+    value:
+      "React (CRA), React Native (Expo), Express.js, SerpAPI, Open Exchange Rates, Google Maps API, Vercel Blob, Node.js",
   },
 ] as const;
 
@@ -307,7 +354,7 @@ export const PROJECTS: Project[] = [
       </div>
     ),
     image: "/projects/hrafn/main.jpg",
-    fields: ["AI", "Full-stack"],
+    fields: ["AI", "Full-stack", "Web"],
     onlineLink: "https://dealer-webapp.vercel.app/",
     sourceCodeLink: "https://github.com/HRAFNAI/dealer_webapp",
     videoLink:
@@ -326,20 +373,60 @@ export const PROJECTS: Project[] = [
       <p className="mt-2 text-gray-300">MushGPT is an AI platform trained on thousands of hand selected research papers and websites to give you correct answer without hallucinations. Magic Myc is a psychedelic chatbot who speaks any language and is an expert on psychedelics, mycology, neuroscience and traditional healing modalities.</p>
       <ProjectBulletList items={[...MUSHGPT_TECH_STACK]} />
     </div>),
-    image: "/projects/mushgpt_1.jpg",
-    fields: ["AI", "Full-stack", "Mobile"],
+    image: "/projects/MushGPT/mushgpt_1.jpg",
+    fields: ["AI", "Full-stack", "Mobile", "Web"],
     onlineLink: "https://mushgpt.com",
     videoLink: "https://www.youtube.com/watch?v=HrHI3yyaIJg&t=1s",
     galleryImages: [
       {
-        src: "/projects/mushgpt_1.jpg",
+        src: "/projects/MushGPT/mushgpt_1.jpg",
         alt: "web App",
         description: "web App",
       },
       {
-        src: "/projects/mushgpt_2.jpg",
+        src: "/projects/MushGPT/mushgpt_2.jpg",
         alt: "Mobile App",
         description: "Mobile App",
+      },
+    ],
+  },
+  {
+    title: "Biyaab",
+    description: (
+      <div>
+        <p className="mt-2 text-gray-300">
+          Biyaab is a global product search app available as a web app, mobile
+          app, and browser extension. Pick one or more locations on a map,
+          search by text or image, and compare prices across regions with
+          currency conversion to USD.
+        </p>
+        <ProjectBulletList items={[...BIYAAB_TECH_STACK]} />
+      </div>
+    ),
+    image: "/projects/Biyaab/main.jpg",
+    fields: ["Full-stack", "Maps", "Web", "Mobile", "Extension"],
+    sourceCodeLink: "https://github.com/Biyaab-Shopping",
+    onlineLink: "https://biyaab.vercel.app/",
+    galleryImages: [
+      {
+        src: "/projects/Biyaab/web.jpg",
+        alt: "Biyaab web app",
+        description: "Text search results with USD conversion",
+      },
+      {
+        src: "/projects/Biyaab/web-2.jpg",
+        alt: "Biyaab web app",
+        description: "Image search with Google Lens",
+      },
+      {
+        src: "/projects/Biyaab/web-3.jpg",
+        alt: "Biyaab web app",
+        description: "Web app — multi-location product search",
+      },
+      {
+        src: "/projects/Biyaab/mobile.jpg",
+        alt: "Biyaab mobile view",
+        description: "Mobile App by using Expo - React Native, URL: https://apps.apple.com/us/app/biyaab/id6575359821",
       },
     ],
   },
@@ -354,7 +441,7 @@ export const PROJECTS: Project[] = [
       </div>
     ),
     image: "/projects/Cinesis/Screenshot_1.jpg",
-    fields: ["AI", "Full-stack"],
+    fields: ["AI", "Full-stack", "Maps"],
     onlineLink: "https://cinesis-good-fit.vercel.app/",
     sourceCodeLink: "https://github.com/ChangDreamDev/Shipment-System-POC",
     galleryImages: [
@@ -362,6 +449,31 @@ export const PROJECTS: Project[] = [
       { src: "/projects/Cinesis/Screenshot_2.jpg", alt: "Shipment System POC" },
       { src: "/projects/Cinesis/Screenshot_3.jpg", alt: "Shipment System POC" },
       { src: "/projects/Cinesis/Screenshot_4.jpg", alt: "Shipment System POC" },
+    ],
+  },
+  {
+    title: "Map Image Generator",
+    description: (
+      <div>
+        <p className="mt-2 text-gray-300">
+          Map Image Generator is a desktop map composition tool built for quickly
+          creating export-ready map visuals. It lets users search for places,
+          customize map styling, place markers, fine-tune crop areas, preview
+          scale, and export polished map images as PNG files.
+        </p>
+        <ProjectBulletList items={[...MapImageGenerator]} />
+      </div>
+    ),
+    image: "/projects/Map-Image-Generator/main.jpg",
+    sourceCodeLink: "https://github.com/ChangDreamDev/Map-Image-Generator",
+    onlineLink: "https://map-image-generator-navy.vercel.app/",
+    fields: ["Desktop", "Maps"],
+    galleryImages: [
+      {
+        src: "/projects/Map-Image-Generator/main.jpg",
+        alt: "Map Image Generator",
+        description: "Desktop map composition and PNG export workflow",
+      },
     ],
   },
   {
@@ -417,7 +529,7 @@ export const PROJECTS: Project[] = [
     description:
       "Experienced in building websites and business applications with a focus on scalability, performance, and security. Skilled in full-stack development, writing clean, efficient code for both frontend and backend. Actively involved in software design, testing, and debugging to ensure seamless functionality and reliability.",
     image: "/projects/3.png",
-    fields: ["Web", "Full-stack"],
+    fields: ["Web", "Full-stack", "Maps"],
     // onlineLink: "https://fullstackdev7dennis.vercel.app",
   },
   {
@@ -437,17 +549,23 @@ export const TYPED_STRINGS = [
   "I design and develop motion",
 ];
 
-export const SOCIALS = [
+type SocialLink = {
+  name: string;
+  icon: IconType;
+  link: string;
+};
+
+export const SOCIALS: readonly SocialLink[] = [
   {
     name: "CV",
     icon: FaFilePdf,
-    link: "https://drive.google.com/file/d/1DEJGy-lLrWixKxIBQM6q-EROaSIFQrv_/view?usp=sharing",
+    link: "https://drive.google.com/file/d/1r0cS5iijqTXKg5nD5qR8tAMGJOdConZJ/view?usp=sharing",
   },
-  // {
-  //   name: "Telegram",
-  //   icon: FaTelegram,
-  //   link: "https://t.me/ok0315",
-  // },
+  {
+    name: "Telegram",
+    icon: FaTelegram,
+    link: "https://t.me/ok0315",
+  },
   // {
   //   name: "Microsoft Teams",
   //   icon: FaMicrosoft,
@@ -498,6 +616,10 @@ export const NAV_LINKS = [
   },
 ] as const;
 
-export const LINKS = {
+type Links = {
+  sourceCode?: string;
+};
+
+export const LINKS: Links = {
   sourceCode: "https://github.com/ChangDreamDev/ChangDreamDev",
 };

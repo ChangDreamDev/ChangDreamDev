@@ -53,14 +53,16 @@ export const Navbar = () => {
             ))}
 
             {/* source code */}
-            <Link
-              href={LINKS.sourceCode}
-              target="_blank"
-              rel="noreferrer noopener"
-              className="cursor-pointer hover:text-[rgb(112,66,248)] transition px-2"
-            >
-              Source Code
-            </Link>
+            {LINKS.sourceCode && (
+              <Link
+                href={LINKS.sourceCode}
+                target="_blank"
+                rel="noreferrer noopener"
+                className="cursor-pointer hover:text-[rgb(112,66,248)] transition px-2"
+              >
+                Source Code
+              </Link>
+            )}
           </div>
         </div>
 
